@@ -12,9 +12,9 @@ Your On-Device AI Assistant
   <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/omnimind-ai/OmniBot">
   <a href="https://github.com/omnimind-ai/OpenOmniBot/releases/latest"><img alt="GitHub Release" src="https://badgen.net/github/release/omnimind-ai/OpenOmniBot/stable"></a>
   <br>
-  <a href="https://trendshift.io/repositories/26966" target="_blank"><img src="https://trendshift.io/api/badge/repositories/26966" alt="omnimind-ai%2FOpenOmniBot | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+  <a href="https://trendshift.io/repositories/26966" target="_blank"><img src="https://trendshift.io/api/badge/repositories/26966" alt="omnimind-ai%2FOpenOmniBot | Trendshift" style="width: 250px;[...]
   <br>
-  <a href="https://omnimind.com.cn"><img src="https://img.shields.io/badge/About_us-万象智维-purple.svg?color=%234b0c77" alt="OmniMind"></a>
+  <a href="https://omnimind.com.cn"><img src="https://img.shields.io/badge/About_us-OmniMind-purple.svg?color=%234b0c77" alt="OmniMind"></a>
   <a href="https://linux.do"><img src="https://img.shields.io/badge/Linux_Do-Community-yellow.svg?color=%23ac3712" alt="Linux Do Community"></a>
   <a href="#community">
     <img src="https://img.shields.io/badge/WeChat-Group-lightgreen" alt="WeChat Group"/>
@@ -152,7 +152,7 @@ flutter pub get
 
 ### Develop the WebUI locally
 
-The WebUI in `webchat/` is a standalone React + TypeScript + Vite project. During local development, Vite serves the frontend with hot reload and proxies `/webchat/api` requests to the Android app's local service.
+The WebUI in `webchat/` is a standalone React + TypeScript + Vite project. During local development, Vite serves the frontend with hot reload and proxies `/webchat/api` requests to the Android app.
 
 1. Install and start OpenOmniBot on an Android device. Keep the computer and device on the same trusted LAN.
 2. In the app, open **Settings > Local Service**, enable the service, and copy its address and Token. The default port is `8899`, but always use the address shown by the app.
@@ -172,7 +172,7 @@ $env:VITE_WEBCHAT_PROXY_TARGET = "http://192.168.1.20:8899"
 pnpm dev
 ```
 
-Open the URL printed by Vite (normally `http://localhost:5173`) and enter the Token copied from the app. Use `pnpm dev` for end-to-end API/SSE testing; the proxy keeps session cookies, realtime events, workspace access, and browser mirroring on the same local origin.
+Open the URL printed by Vite (normally `http://localhost:5173`) and enter the Token copied from the app. Use `pnpm dev` for end-to-end API/SSE testing; the proxy keeps session cookies and realtime events intact.
 
 Before submitting WebUI changes, run:
 
@@ -184,7 +184,7 @@ pnpm run build
 
 The production files are generated in `webchat/dist/`. Both `dist/` and `node_modules/` are local outputs and must not be committed.
 
-Android builds handle the WebUI automatically: Gradle runs the locked pnpm install, executes the Vite production build, clears stale WebChat assets, and copies only `dist/` into the APK. To verify this step without building the full app, run:
+Android builds handle the WebUI automatically: Gradle runs the locked pnpm install, executes the Vite production build, clears stale WebChat assets, and copies only `dist/` into the APK. To verify the bundle:
 
 ```bash
 ./gradlew :app:syncWebChatBundle -Ptarget=lib/main_standard.dart
@@ -221,7 +221,7 @@ OpenOmniBot/
 
 <h2 id="community">Community</h2>
 
-Thanks to the community （ including linux.do ）developers supporting OpenOmniBot.
+Thanks to the community (including linux.do) developers supporting OpenOmniBot.
 
 Special thanks to these open-source projects:
 
