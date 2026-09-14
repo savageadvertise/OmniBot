@@ -1,9 +1,9 @@
 # assists
 
-`assists` 提供精简后的公共任务生命周期、聊天请求与状态回调能力。
+`assists` provides simplified public task lifecycle, chat request, and state callback capabilities.
 
-- `AssistsCore`：对外任务接口。
-- `StateMachine`：任务状态管理。
-- `TaskManager`：任务注册与调度。
-- `controller/http`：聊天与模型请求。
-- `api`：公共模型、枚举和监听器。
+- `AssistsCore`: External task interface.
+- `StateMachine`: Task state management.
+- `TaskManager`: Task registration and scheduling.
+- `controller/http`: Chat and model requests.
+- `api`: Common models, enums, and listeners.
